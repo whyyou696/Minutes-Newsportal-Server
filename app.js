@@ -2,6 +2,7 @@ const express = require('express');
 const HelloController = require('./controllers/HelloController');
 const ArticleController = require('./controllers/ArticleController');
 const UserController = require('./controllers/UserController');
+const CategoryController = require('./controllers/CategoryController');
 
 const app = express()
 const Port = 3000
@@ -24,6 +25,11 @@ app.get('/articles/:id', ArticleController.getArticleById);
 app.put('/articles/:id', ArticleController.updateArticleById);
 
 //category endpoints
+app.get('/categories', CategoryController.getCategories);
+app.post('/categories', CategoryController.postCategories);
+app.put('/categories/:id', CategoryController.updateCategoriesById);
+app.delete('/categories/:id', CategoryController.deleteCategoriesById);
+
 
 app.listen(Port, () => {
     console.log(`Listening on port ${Port}`)
