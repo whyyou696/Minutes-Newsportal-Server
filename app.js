@@ -3,6 +3,7 @@ const HelloController = require('./controllers/HelloController');
 const ArticleController = require('./controllers/ArticleController');
 const UserController = require('./controllers/UserController');
 const CategoryController = require('./controllers/CategoryController');
+const PublicController = require('./controllers/PublicController');
 
 const app = express()
 const Port = 3000
@@ -29,6 +30,10 @@ app.get('/categories', CategoryController.getCategories);
 app.post('/categories', CategoryController.postCategories);
 app.put('/categories/:id', CategoryController.updateCategoriesById);
 app.delete('/categories/:id', CategoryController.deleteCategoriesById);
+
+//public endpoints
+app.get('/publics', PublicController.getPublics);
+app.get('/publics/:id', PublicController.getPublicById);
 
 
 app.listen(Port, () => {

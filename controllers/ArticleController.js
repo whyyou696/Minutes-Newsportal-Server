@@ -38,7 +38,7 @@ module.exports = class ArticleController {
   }
   static async deleteArticlesById(req, res) {
     try {
-      let id = req.params.id;
+      let { id } = req.params;
       let article = await Article.findByPk(id);
       if (!article) throw { name: "NotFound" };
       await article.destroy();
@@ -54,7 +54,7 @@ module.exports = class ArticleController {
   }
   static async getArticleById(req, res) {
     try {
-      let id = req.params.id;
+      let { id } = req.params;
       let article = await Article.findByPk(id);
       if (!article) throw { name: "NotFound" };
       res.status(200).json(article);
@@ -70,7 +70,7 @@ module.exports = class ArticleController {
   static async updateArticleById(req, res) {
     try {
       let { title, content, imgUrl, categoryId, authorId } = req.body;
-      let id = req.params.id; // Adding this line to get the article ID from the request parameters
+      let { id } = req.params;
       let article = await Article.findByPk(id);
 
       if (!article) throw { name: "NotFound" };

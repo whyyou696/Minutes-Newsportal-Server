@@ -2,3 +2,32 @@
 # P2-Challenge-1 (Server Side)
 
 > Tuliskan API Docs kamu di sini
+
+# CH1-News Portal
+
+## List Of Endpoints
+
+## 1.User
+
+- POST /Register
+- POST /Login
+
+## 2.Article
+
+- GET /articles
+- POST /articles
+- DELETE /articles/:id
+- GET /articles/:id
+- PUT /articles/:id
+
+## 3.Category
+
+- GET /categories
+- POST /categories
+- PUT /categories/:id
+- DELETE /categories/:id
+
+## 4.Public
+
+- GET /publics
+- GET /publics/:id
