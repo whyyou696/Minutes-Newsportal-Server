@@ -38,8 +38,8 @@ module.exports = class UserController {
             //cek apakah user ada di database
             let user = await User.findOne({ where: { email } })       
             if (!user) {
+                throw { name: "InvalidUser" }
             }
-            throw { name: "InvalidUser" }
             
             //cek apakah password benar
             let isPasswordValid = comparePassword(password, user.password)
