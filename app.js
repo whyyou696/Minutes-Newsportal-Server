@@ -14,6 +14,9 @@ app.get('/', HelloController.getHello);
 //article endpoints
 app.get('/articles', ArticleController.getArticles);
 app.post('/articles', ArticleController.postArticles);
+app.delete('/articles/:id', ArticleController.deleteArticlesById);
+app.get('/articles/:id', ArticleController.getArticleById);
+app.put('/articles/:id', ArticleController.updateArticleById);
 
 app.listen(Port, () => {
     console.log(`Listening on port ${Port}`)
