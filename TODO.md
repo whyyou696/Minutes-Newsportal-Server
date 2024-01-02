@@ -80,7 +80,7 @@ Target:
 
 ### **API Documentation**
 
-- [ ] Route /path yang digunakan di aplikasi yang kamu buat
+- [x] Route /path yang digunakan di aplikasi yang kamu buat
 - [ ] Informasi yang diperlukan oleh user saat ingin menggunakan route/path API (seperti body, header, parameter, dll)
 - [ ] Response serta status code yang akan didapatkan oleh pengguna (info, error, warning, dsb)
 
