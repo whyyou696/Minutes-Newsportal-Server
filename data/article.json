@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "title": "STY Tak Banyak Berharap di Indonesia vs Libya",
+      "content": "Shin Tae Yong buka suara soal harapan dalam pertandingan Timnas Indonesia vs Libya pada ajang uji coba jelang Piala Asia 2023.",
+      "imgUrl": "https://akcdn.detik.net.id/visual/2023/11/20/jelang-filipina-vs-indonesia-1_169.jpeg?w=650&q=90",
+      "categoryId": 1,
+      "authorId": 1      
+    },
+    {
+      "id": 2,
+      "title": "Google Ingatkan Hari Introvert Sedunia, Netizen Curhat Soal Prasangka",
+      "content": "Google memantik diskusi soal golongan mana warganet, apakah introvert atau ekstrovert, usai mengingatkan soal perayaan Hari Introvert Sedunia.",
+      "imgUrl": "https://akcdn.detik.net.id/visual/2022/05/17/mengunjungi-kampus-google-di-mountain-view-6_169.jpeg?w=650&q=90",
+      "categoryId": 2,
+      "authorId": 1  
+    },
+    {
+      "id": 3,
+      "title": "Ekspor Daihatsu dari Indonesia Dimulai Bertahap Usai Terseret Skandal",
+      "content": "Ekspor Daihatsu dari Indonesia ke 60 negara tujuan telah dilakukan secara bertahap dan sempat dihentikan buntut temuan skandal manipulasi uji keselamatan.",
+      "imgUrl": "https://akcdn.detik.net.id/visual/2023/12/20/japan-auto-daihatsu_169.jpeg?w=650&q=90",
+      "categoryId": 3,
+      "authorId": 1  
+    }
+]

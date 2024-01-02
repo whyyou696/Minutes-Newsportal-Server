@@ -1,14 +1,14 @@
 [
-    {
-      "id": 1,
-      "name": "Vinyl"
-    },
-    {
-      "id": 2,
-      "name": "CD"
-    },
-    {
-      "id": 3,
-      "name": "Tape"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Sport"
+  },
+  {
+    "id": 2,
+    "name": "Teknologi"
+  },
+  {
+    "id": 3,
+    "name": "Otomotif"
+  }
+]
