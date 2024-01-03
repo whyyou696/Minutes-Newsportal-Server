@@ -14,7 +14,7 @@ async function authentication(req, res, next) {
         }
         
         let payload = verifyToken(access_token);
-        console.log(payload, "<< payload")
+        //console.log(payload, "<< payload")
 
         let user = await User.findByPk(payload.id);
         if(!user) {
@@ -28,12 +28,8 @@ async function authentication(req, res, next) {
 
         next();
     } catch (error) {
-        console.log(error.name);
-        if(error.name === "InvalidToken" || error.name === "JsonWebTokenError") {
-            res.status(401).json({ message: "Invalid Token" });
-        } else {
-            res.status(500).json({ message: "Internal Server Error" });
-        }
+       // console.log(error.name);
+        next(error)
     }
 }
 

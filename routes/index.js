@@ -3,7 +3,7 @@ const userRouter = require('./user.js');
 const articleRouter = require('./article.js');
 const categoryRouter = require('./category.js');
 const publicRouter = require('./public.js');
-
+const authentication = require('../middlewares/authentication');
 const HelloController = require('../controllers/HelloController');
 //hello endpoint
 router.get('/', HelloController.getHello);
