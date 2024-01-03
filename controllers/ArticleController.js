@@ -13,7 +13,6 @@ module.exports = class ArticleController {
   static async postArticles(req, res) {
     try {
       let { title, content, imgUrl, categoryId, authorId } = req.body;
-
       let article = await Article.create({
         title,
         content,
