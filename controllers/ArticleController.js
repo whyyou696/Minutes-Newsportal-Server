@@ -72,9 +72,7 @@ module.exports = class ArticleController {
       let { title, content, imgUrl, categoryId, authorId } = req.body;
       let { id } = req.params;
       let article = await Article.findByPk(id);
-
       if (!article) throw { name: "NotFound" };
-
       await article.update({
         title,
         content,
