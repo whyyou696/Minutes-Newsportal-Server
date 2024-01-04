@@ -3,15 +3,21 @@ const userRouter = require('./user.js');
 const articleRouter = require('./article.js');
 const categoryRouter = require('./category.js');
 const publicRouter = require('./public.js');
-const authentication = require('../middlewares/authentication');
+
 const HelloController = require('../controllers/HelloController');
+const authentication = require('../middlewares/authentication.js');
+const errorhandler = require('../middlewares/errorhandler.js');
 //hello endpoint
 router.get('/', HelloController.getHello);
 
 //router
 router.use('/users', userRouter);
+router.use(authentication)
+
 router.use('/articles', articleRouter);
 router.use('/categories', categoryRouter);
 router.use('/publics', publicRouter);
+
+router.use(errorhandler)
 
 module.exports = router

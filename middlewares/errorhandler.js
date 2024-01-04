@@ -1,7 +1,6 @@
 module.exports = function (error, req, res, next) {
   let status = 500;
   let message = "Internal Server Error";
-
   switch (error.name) {
     case "SequelizeValidationError":
     case "SequelizeUniqueConstraintError":
