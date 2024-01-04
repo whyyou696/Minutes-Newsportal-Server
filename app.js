@@ -1,4 +1,5 @@
 //environtmet variables
+if (process.env.NODE_ENV !== "production")
 require("dotenv").config()
 //console.log(process.env)
 const express = require('express');
@@ -13,6 +14,7 @@ app.use(express.json()) // body-parser : JSON
 
 app.use(router)
 app.use(errorhandler)
+
 //app listener
 app.listen(Port, () => {
     console.log(`Listening on port ${Port}`)

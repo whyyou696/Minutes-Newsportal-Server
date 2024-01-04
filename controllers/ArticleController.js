@@ -1,4 +1,11 @@
 const { Article } = require("../models");
+const {v2: cloudinary} = require('cloudinary');
+cloudinary.config({
+  CLOUD_NAME: process.env.CLOUD_NAME,
+  CLOUD_API_KEY: process.env.CLOUD_API_KEY,
+  CLOUD_API_SECRET: process.env.CLOUD_API_SECRET
+});
+
 
 module.exports = class ArticleController {
   static async getArticles(req, res, next) {
@@ -86,15 +93,36 @@ module.exports = class ArticleController {
 
       res.status(200).json({ message: "Article has been updated" });
     } catch (error) {
-      // if (error.name === "SequelizeValidationError") {
-      //   let message = error.errors[0].message;
-      //   res.status(400).json({ message: message });
-      // } else if (error.name === "NotFound") {
-      //   res.status(404).json({ message: "Article not found" });
-      // } else {
-      //   res.status(500).json({ message: "Internal Server Error" });
-      // }
       next(error)
     }
   }
+  static async articleUploadImage(req, res, next) {
+    try {
+        const { id } = req.params
+        const article = Article.findByPk(id)
+        if (!article) {
+            throw { name: "NotFound" }
+        }
+        const bufferStr = req.file.buffer.toString("base64");
+        const uploadData = `data:${req.file.mimetype};base64,${bufferStr}`;
+        const uploadToCloud = await cloudinary.uploader.upload(uploadData, {
+            public_id: req.file.originalname,
+            folder: "ch1-newsportal",
+            resource_type: "auto"
+        })
+         console.log(uploadToCloud);
+        await Article.update({ imgUrl: uploadToCloud.secure_url }, {
+            where: {
+                id: id
+            }
+        })
+
+        res.status(200).json("Successfully Upload Image")
+    } catch (error) {
+         console.log(error);
+        // res.status(500).json({ message: "Internal Server Error" });
+        next(error)
+    }
+}
+
 };
