@@ -4,6 +4,7 @@ const { authorizationArticle } = require('../middlewares/authorization');
 const authentication = require('../middlewares/authentication');
 const multer = require('multer');
 const storage = multer.memoryStorage()
+const errorhandler = require("../middlewares/errorhandler");
 const upload = multer({ storage: storage })
 
 //article endpoints
@@ -13,7 +14,8 @@ router.post('/', ArticleController.postArticles);
 router.delete('/:id', authorizationArticle, ArticleController.deleteArticlesById);
 router.get('/:id', ArticleController.getArticleById);
 router.put('/:id', authorizationArticle, ArticleController.updateArticleById);
-router.patch('/:id/imgurl',upload.single('imgUrl'), ArticleController.articleUploadImage)
+router.patch('/:id/imgurl',authorizationArticle, upload.single('imgUrl'), ArticleController.articleUploadImage)
 
+router.use(errorhandler)
 
 module.exports = router

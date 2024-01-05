@@ -94,20 +94,20 @@ Target:
 
 ### **Authentication + Authorization**
 
-- [ ] POST /add-user (khusus untuk staff, dilakukan oleh admin)
-  - [ ] Request Headers: { Authorization: "Bearer [your access token]" }
-  - [ ] Request body: { email, password }
-  - [ ] Response:
-    - [ ] 201: { id, email }
-    - [ ] 400: { errors }
+- [x] POST /add-user (khusus untuk staff, dilakukan oleh admin)
+  - [x] Request Headers: { Authorization: "Bearer [your access token]" }
+  - [x] Request body: { email, password }
+  - [x] Response:
+    - [x] 201: { id, email }
+    - [x] 400: { errors }
 
   Note: Pastikan password telah terhash sebelum data user masuk ke dalam database.
 
-- [ ] POST /login (semua role, baik admin atau staff)
-  - [ ] Request body: { email, password }
-  - [ ] Response:
-    - [ ] 200: { access_token, email/username, role }
-    - [ ] 401: { error invalid username or email or password }
+- [x] POST /login (semua role, baik admin atau staff)
+  - [x] Request body: { email, password }
+  - [x] Response:
+    - [x] 200: { access_token, email/username, role }
+    - [x] 401: { error invalid username or email or password }
 
 - [x] Menambahkan Authentication dan Authorization
 

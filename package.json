@@ -20,6 +20,8 @@
     "sequelize-cli": "^6.6.2"
   },
   "scripts": {
+    "dev" : "npx nodemon bin/www",
+    "start": "node bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
