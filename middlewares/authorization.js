@@ -7,8 +7,9 @@ async function authorizationArticle(req, res, next) {
     if (!article) {
       throw { name: "NotFound" };
     }
+    console.log(req.user)
     if (req.user.role === "Admin" || article.authorId === req.user.id) {
-      next()
+      next();
     } else {
       throw { name: "Forbidden" };
     }
@@ -25,7 +26,7 @@ async function authorizationCategory(req, res, next) {
       throw { name: "NotFound" };
     }
     if (req.user.role === "Admin") {
-    next()
+      next();
     } else {
       throw { name: "Forbidden" };
     }
@@ -36,14 +37,14 @@ async function authorizationCategory(req, res, next) {
 
 async function authorizationAdmin(req, res, next) {
   try {
-    if (req.user.role == "Admin") {
-    next()
+    if (req.user.role === "Admin") {
+      next();
     } else {
       throw { name: "Forbidden" };
     }
   } catch (error) {
-    console.log(error)
-    console.log(req.user)
+    console.log(error);
+    console.log(req.user);
     next(error);
   }
 }
@@ -52,4 +53,3 @@ module.exports = {
   authorizationCategory,
   authorizationAdmin,
 };
-

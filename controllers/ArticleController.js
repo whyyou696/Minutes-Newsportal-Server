@@ -1,11 +1,10 @@
 const { Article } = require("../models");
 const {v2: cloudinary} = require('cloudinary');
 cloudinary.config({
-  CLOUD_NAME: process.env.CLOUD_NAME,
-  CLOUD_API_KEY: process.env.CLOUD_API_KEY,
-  CLOUD_API_SECRET: process.env.CLOUD_API_SECRET
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
 });
-
 
 module.exports = class ArticleController {
   static async getArticles(req, res, next) {

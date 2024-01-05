@@ -56,12 +56,11 @@ module.exports = class UserController {
       if (!isPasswordValid) {
         throw { name: "InvalidUser" };
       }
-
       //generate token
-      let acces_token = signToken({ id: user.id });
+      let access_token = signToken({ id: user.id });
 
       //kirim response token ke client
-      res.status(200).json({ acces_token });
+      res.status(200).json({ access_token });
     } catch (error) {
     //   console.log(error);
     //   if (error.name === "ValidationError") {
