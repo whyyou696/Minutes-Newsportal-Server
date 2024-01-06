@@ -7,7 +7,7 @@ async function authorizationArticle(req, res, next) {
     if (!article) {
       throw { name: "NotFound" };
     }
-    console.log(req.user)
+   // console.log(req.user)
     if (req.user.role === "Admin" || article.authorId === req.user.id) {
       next();
     } else {
@@ -43,8 +43,8 @@ async function authorizationAdmin(req, res, next) {
       throw { name: "Forbidden" };
     }
   } catch (error) {
-    console.log(error);
-    console.log(req.user);
+    // console.log(error);
+    // console.log(req.user);
     next(error);
   }
 }

@@ -17,10 +17,12 @@
   "main": "index.js",
   "devDependencies": {
     "dotenv": "^16.3.1",
-    "sequelize-cli": "^6.6.2"
+    "jests": "^0.0.0",
+    "sequelize-cli": "^6.6.2",
+    "supertest": "^6.3.3"
   },
   "scripts": {
-    "dev" : "npx nodemon bin/www",
+    "dev": "npx nodemon bin/www",
     "start": "node bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
