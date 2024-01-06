@@ -32,6 +32,5 @@ module.exports = function (error, req, res, next) {
   res.status(status).json({
     message: message,
   });
-  console.log(error)
 };
 
