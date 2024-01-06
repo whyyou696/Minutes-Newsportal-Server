@@ -1,3 +1,4 @@
+if (process.env.NODE_ENV !== "production")
 //environtmet variables
 require("dotenv").config()
 //console.log(process.env)
