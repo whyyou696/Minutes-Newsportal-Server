@@ -1,4 +1,4 @@
-const { Article } = require("../models");
+const { Article } = require("../models/index");
 const {v2: cloudinary} = require('cloudinary');
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,

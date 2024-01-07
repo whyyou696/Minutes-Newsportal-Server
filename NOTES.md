@@ -15,4 +15,21 @@
 
 ## W1D2
 
-- 
+- Membuat authentikasi untuk login
+- Membuat authorization untuk admin di register
+- membuat authorization untuk update category di setiap id (optional: membuat authorization untuk delete category di setiap id)
+- membuat authorization untuk update,delete, dan upload image di setiap id
+- membuuat error handler dan menghapus semua error di setiap function di catch error nya
+
+## w1d3
+
+- membuat sorting di public
+- membuat search di public
+- membuat pagination di public
+- membuat filtering di public
+- testing di home controller
+
+## W1D4
+
+- deploying menggunakan supabase, google cloud, dan cloudflare
+- jangan lupa membeli domain

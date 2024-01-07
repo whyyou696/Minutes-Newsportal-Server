@@ -1,4 +1,4 @@
-const { Category } = require("../models");
+const { Category } = require("../models/index");
 
 module.exports = class CategoryController {
   static async getCategories(req, res, next) {
