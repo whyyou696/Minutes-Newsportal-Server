@@ -33,3 +33,7 @@
 
 - deploying menggunakan supabase, google cloud, dan cloudflare
 - jangan lupa membeli domain
+
+## Server Link Deployment
+
+server: http://ch01-newsportal.wahyurj.my.id/publics
