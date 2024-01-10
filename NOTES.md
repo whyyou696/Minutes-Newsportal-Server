@@ -28,11 +28,15 @@
 - membuat pagination di public
 - membuat filtering di public
 - testing di home controller
+- testing user,category,public (belum selesai)
 
 ## W1D4
 
 - deploying menggunakan supabase, google cloud, dan cloudflare
 - jangan lupa membeli domain
+- untuk deployment harus sesuai penulisannya
+nb: "deployment mengalami error 2 hari"
+
 
 ## Server Link Deployment
 

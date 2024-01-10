@@ -1,4 +1,4 @@
-const { Article } = require("../models/index");
+const { Article, User, Category } = require("../models/index");
 const {v2: cloudinary} = require('cloudinary');
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
@@ -10,7 +10,13 @@ cloudinary.config({
 module.exports = class ArticleController {
   static async getArticles(req, res, next) {
     try {
-      let articles = await Article.findAll();
+      let articles = await Article.findAll({
+        include: [
+          { model: User, attributes: ['username', 'email'] },
+          { model: Category, attributes: ['name'] }
+        ]
+      });
+
       res.status(200).json(articles);
     } catch (error) {
       //console.log(error);
@@ -21,14 +27,7 @@ module.exports = class ArticleController {
   static async postArticles(req, res, next) {
     try {
       let { title, content, imgUrl, categoryId, authorId } = req.body;
-      let article = await Article.create({
-        title,
-        content,
-        imgUrl,
-        categoryId,
-        authorId,
-      });
-
+      let article = await Article.create(req.body);
       res.status(201).json(article);
     } catch (error) {
       //console.log(error.name);
@@ -79,7 +78,7 @@ module.exports = class ArticleController {
 
   static async updateArticleById(req, res, next) {
     try {
-      let { title, content, imgUrl, categoryId, authorId } = req.body;
+      let { title, content, imgUrl, categoryId } = req.body;
       let { id } = req.params;
       let article = await Article.findByPk(id);
       if (!article) throw { name: "NotFound" };
@@ -88,7 +87,6 @@ module.exports = class ArticleController {
         content,
         imgUrl,
         categoryId,
-        authorId,
       });
 
       res.status(200).json({ message: "Article has been updated" });

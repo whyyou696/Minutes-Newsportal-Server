@@ -1,4 +1,4 @@
-const { Article } = require("../models/index");
+const { Article, Category } = require("../models/index");
 const { Op } = require("sequelize");
 
 
@@ -72,4 +72,13 @@ module.exports = class PublicController {
       next(error);
     }
   }
+  static async getPublicCategories(req, res, next) {
+    try {
+      let categories = await Category.findAll();
+      res.status(200).json(categories);
+    } catch (error) {
+      next(error)
+    }
+  }
+  
 };

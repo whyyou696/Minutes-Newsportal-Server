@@ -137,8 +137,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 _Response (200 - OK)
@@ -169,8 +169,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 _Response (201 - Created)
@@ -210,8 +210,8 @@ _Request
 
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 - params:
@@ -246,8 +246,8 @@ _Request
 
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 - params:
@@ -291,8 +291,8 @@ _Request
 
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 - params:
@@ -341,8 +341,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 _Response (200 - OK)
@@ -375,8 +375,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 _Response (201 - Created)
@@ -412,8 +412,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 - params:
@@ -448,8 +448,8 @@ _Request
   
 ```json
 {
-    "access_token": "string"
-}
+    "Authorization": "Bearer <token>"
+} 
 ```
 
 - params:

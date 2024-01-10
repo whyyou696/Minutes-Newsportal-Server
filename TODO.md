@@ -236,3 +236,7 @@ Mengimplementasikan sorting, pagination dan filter pada aplikasi server yang sud
 ## **W1D4 & W1D6**
 
 Target: Melakukan deployment menggunakan AWS EC2/GCP/Cloud Deployment lainnya untuk server yang telah dibuat
+
+## Server Link Deployment
+
+server: http://ch01-newsportal.wahyurj.my.id/publics
