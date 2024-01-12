@@ -1,8 +1,8 @@
 [
     {
-        "id": 1,
-        "username": "admin1",
-        "email": "admin1@gmail.com",
+        "id": 2,
+        "username": "admin2",
+        "email": "admin2@gmail.com",
         "password": "admin",
         "role": "Admin",
         "phoneNumber": "081234567",
